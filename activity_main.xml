@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Row 1 -->
+    <TextView
+        android:id="@+id/first_name_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/first_name_label"
+        app:layout_constraintStart_toEndOf="@+id/first_name_label"
+        />
+
+    <!-- Row 2 -->
+    <TextView
+        android:id="@+id/last_name_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/first_name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/last_name_label"
+        app:layout_constraintStart_toEndOf="@+id/last_name_label"
+        />
+
+    <!-- Row 3 -->
+    <TextView
+        android:id="@+id/phone_number_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/last_name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/phone_number_label"
+        app:layout_constraintStart_toEndOf="@+id/phone_number_label"
+        />
+
+    <!-- Row 4 -->
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="newContact"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_label"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:onClick="removeContact"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/add_button"
+        app:layout_constraintStart_toEndOf="@+id/add_button"
+        />
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:onClick="clearBoxes"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/delete_button"
+        app:layout_constraintStart_toEndOf="@id/delete_button"
+        />
+    <Button
+        android:id="@+id/show_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show All"
+        android:onClick="show"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/clear_button"
+        app:layout_constraintStart_toEndOf="@id/clear_button"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
